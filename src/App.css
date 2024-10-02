@@ -1,0 +1,39 @@
+.wrapper {
+    object-fit: contain !important;
+    /* background-image:url("/assets/img/3d-modern-background-with-flowing-lines_1048-16926.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.stickynav {
+    position: fixed !important;
+    z-index: 3 !important;
+    top: 10px;
+}
+.stickynav .services .skills .portifolio {
+    height: 100vh !important;
+    width: 100 vh !important;
+}
+.services {
+    /* background-image: url("\assets\img\2850303.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+} 
+
+.skills {
+    /* background-image: url("\assets\img\5056412.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+}
+.portifolio {
+    /* background-image: url("\assets\img\6000397.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+Accordion {
+    position: fixed !important;
+    bottom: 10px;
+}
+

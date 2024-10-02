@@ -1,0 +1,102 @@
+
+@import url(https://fonts.googleapis.com/css?family=Satisfy:regular);
+
+.headerpic {
+    object-fit: contain !important;
+}
+
+.grower {
+    animation-name: grow;
+    animation: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleX(0.5);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(1.5);
+    }
+
+}
+
+.firsttxt {
+    animation: grow;
+    animation-delay: 0.5s;
+}
+
+.secondtxt {
+    animation: grow;
+    animation-delay: 1s;
+}
+
+.thirdtxt {
+    animation: grow;
+    animation-delay: 1.5s;
+}
+.head {
+    height: 80%;
+}
+.left-div {
+    object-fit: contain !important;
+    background-image:url("/assets/img/left-panel.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-div {
+    object-fit: contain !important;
+    background-image: url("/assets/img/right-panel-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-div .middle-div .right-div {
+    grid-row: 1;
+    grid-column: 1;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'satisfy',cursive;
+}
+section{
+    position: relative;
+    /* background: #000000;
+    display:flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+}
+
+Button {
+    position: absolute;
+    z-index: 2 !important;
+}
+/* section span {
+    z-index: 2 !important;
+    mix-blend-mode: overlay;
+} */
+section h2{
+    color:#ffffff;
+    font-size:3em;
+    z-index:1;
+    mix-blend-mode: overlay;
+}
+
+section video{
+    position: absolute;
+    top:0;
+    right:15px;
+    left:5px;
+    width:100%;
+    object-fit: cover;
+}
