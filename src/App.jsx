@@ -7,7 +7,9 @@ import PageHeader from './components/page-header/pageheader';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 
 function App() {
- 
+
+      const [activeIndex,setActiveIndex]=useState(1);
+      
   return (
     <div className='wrapper w-full h-full sm:w-screen sm:h-full'>
         <div className='grid flex justify-content-center'>
