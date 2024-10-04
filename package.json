@@ -13,13 +13,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/blob": "^0.24.1",
     "gh-pages": "^6.1.1",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",
     "primereact": "^10.8.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vite-plugin-vercel": "^9.0.2"
+    "vite-plugin-vercel": "^0.0.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
