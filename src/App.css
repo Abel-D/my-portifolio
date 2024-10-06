@@ -10,6 +10,11 @@
     z-index: 3 !important;
     top: 10px;
 }
+.contactme {
+    position: fixed !important;
+    z-index: 3 !important;
+    bottom: 10px;
+}
 .stickynav .services .skills .portifolio {
     height: 100vh !important;
     width: 100 vh !important;

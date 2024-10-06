@@ -8,8 +8,6 @@ import { Accordion, AccordionTab } from 'primereact/accordion';
 
 function App() {
 
-      const [activeIndex,setActiveIndex]=useState(1);
-      
   return (
     <div className='wrapper w-full h-full sm:w-screen sm:h-full'>
         <div className='grid flex justify-content-center'>
@@ -30,13 +28,15 @@ function App() {
           </div>
           <div className='projects col-12 '>
              <div className='overview w-full h-full p-3'>PROJECTS</div> 
-          </div>
-          <Accordion activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
-            <AccordionTab header="Message Me">
-               Content I
-            </AccordionTab>
-         </Accordion>
+          </div>          
         </div>
+        <div className='contactme flex justify-content-end align-items-end w-full'>
+            <Accordion activeIndex={0}>
+               <AccordionTab icon='pi pi-inbox' header="Message Me">
+                  Content I
+               </AccordionTab>
+            </Accordion>
+         </div>
     </div>
   )
 }
