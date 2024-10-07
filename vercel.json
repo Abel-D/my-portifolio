@@ -1,9 +1,7 @@
 {
-    "installCommand": "npm install --force",        
-    "build": {
-      "command": "npm run build",
-      "output": "dist" 
-    },
+    "installCommand": "npm install --force",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
     "routes": [
       {
         "src": "/(.*)",
