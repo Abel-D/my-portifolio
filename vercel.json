@@ -21,6 +21,5 @@
             "source": "/(.*)",
             "destination": "/index.html"
           }
-        ],
-     
+        ]     
   }
