@@ -1,6 +1,5 @@
 {
   "name": "my-portifolio",
-  "homepage": "https://Abel-D.github.io/my-portifolio",
   "private": true,
   "proxy": "https://blob.vercel-storage.com/",
   "version": "0.0.1",
