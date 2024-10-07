@@ -6,6 +6,7 @@ export default defineConfig(({mode})=>{
   
 const env = loadEnv(mode, process.cwd(),'');
 return {
+  base: '/',
   define:{ 'process.env': env},
   plugins: [react()],
 }
