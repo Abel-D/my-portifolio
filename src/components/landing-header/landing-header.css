@@ -1,6 +1,13 @@
 
 @import url(https://fonts.googleapis.com/css?family=Satisfy:regular);
 
+iframe {
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+}
+
 .headerpic {
     object-fit: contain !important;
 }
@@ -61,6 +68,11 @@
     grid-row: 1;
     grid-column: 1;
 } 
+
+.embed {
+    /* padding:56.25% 0 0 0; */
+    position:relative;
+}
 
 *{
     margin: 0;
