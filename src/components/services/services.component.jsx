@@ -13,7 +13,7 @@ const ServicesComponent =()=> {
                     <div className="p-3 h-full">
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                             <div className="flex flex-column align-items-center">
-                                <span className="font-bold text-2xl text-900">Frontend application design and development</span>
+                                <span className="font-bold text-2xl text-900">Frontend design and development</span>
                                 <span className="ml-2 font-medium text-600">Attractive UI design and development for all devices</span>
                             </div>
                             <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
@@ -40,7 +40,7 @@ const ServicesComponent =()=> {
                     <div className="p-3 h-full">
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                              <div className="flex flex-column align-items-center">
-                                    <span className="font-bold text-2xl text-900">Backend application design and development</span>
+                                    <span className="font-bold text-2xl text-900">Backend design and development</span>
                                     <span className="ml-2 font-medium text-600">Backend API and database management system design and development.</span>
                                 </div>
                                 <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
@@ -75,8 +75,35 @@ const ServicesComponent =()=> {
                 <div className="col-12 lg:col-4">
                     <div className="p-3 h-full">
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
+                             <div className="flex flex-column align-items-center">
+                                    <span className="font-bold text-2xl text-900">Custom Software solutions</span>
+                                    <span className="ml-2 font-medium text-600">Custom curated web and desktop solutions based on your business need. </span>
+                                </div>
+                                <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
+                            <ul>
+                                <li className="flex align-items-center mb-3">
+                                    <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                    <span>Spreadsheet management solutions</span>
+                                </li>
+                                <li className="flex align-items-center mb-3">
+                                    <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                    <span>Big data migration</span>
+                                </li>
+                                <li className="flex align-items-center mb-3">
+                                    <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                    <span>Process automation</span>
+                                </li> 
+                            </ul>
+                            <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300 mt-auto" />
+                                {/* <Button label="Read More" className="p-3 w-full mt-auto" /> */}
+                          </div>
+                        </div>
+                    </div>
+                <div className="col-12 lg:col-4">
+                    <div className="p-3 h-full">
+                        <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                         <div className="flex flex-column align-items-center">
-                                <span className="font-bold text-2xl text-900">Software development project Management</span>
+                                <span className="font-bold text-2xl text-900">Project Management</span>
                                 <span className="ml-2 font-medium text-600">Full cycle software project management using standard frameworks.</span>
                             </div>
                                 <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
@@ -104,7 +131,7 @@ const ServicesComponent =()=> {
                     <div className="p-3 h-full">
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                              <div className="flex flex-column align-items-center">
-                                <span className="font-bold text-2xl text-900">Hosting and Cloud services</span>
+                                <span className="font-bold text-2xl text-900">DevOps solutions</span>
                                 <span className="ml-2 font-medium text-600">Deploy and monitor applications on any hosting or cloud services</span>
                             </div>
                             <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
@@ -119,7 +146,7 @@ const ServicesComponent =()=> {
                                 </li>
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                    <span>Hosting solution - CloudFlare,Vercel</span>
+                                    <span>Hosting solutions - CloudFlare,Vercel</span>
                                 </li>
                                
                             </ul>

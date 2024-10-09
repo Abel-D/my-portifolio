@@ -13,12 +13,14 @@
 .contactme {
     position: fixed !important;
     z-index: 3 !important;
-    bottom: 10px;
+    bottom: 0;
 }
+
 .stickynav .services .skills .portifolio {
     height: 100vh !important;
     width: 100 vh !important;
 }
+
 .services {
     /* background-image: url("\assets\img\2850303.jpg");
     background-repeat: no-repeat;
@@ -29,8 +31,8 @@
     /* background-image: url("\assets\img\5056412.jpg");
     background-repeat: no-repeat;
     background-size: cover; */
-
 }
+
 .portifolio {
     /* background-image: url("\assets\img\6000397.jpg"); 
     background-repeat: no-repeat;

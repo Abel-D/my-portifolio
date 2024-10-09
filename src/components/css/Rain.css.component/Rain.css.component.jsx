@@ -19,9 +19,9 @@ export const RainCssComponent =()=> {
     
     }
 
-    useEffect({
+    useEffect(()=>{
         createRain
-    })
+    },[])
     
     // function to generate a random number range.
     function randRange( minNum, maxNum) {

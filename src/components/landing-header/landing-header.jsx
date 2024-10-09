@@ -95,10 +95,10 @@ function LandingHeader({content}){
                             </iframe>
                             
                         </div>
-                   </section> 
-                   <div className='btns flex flex-column justify-content-center align-items-center w-full m-1 mr-0 mt-6 lg:px-6'> 
-                        <h2 className="thirdtxt mt-0 mb-4 text-300 text-xl line-height-3">Full-stack Engineer - React, Angular, Next, .Net, Python, Django</h2>
-                        <Button label="More about me.." type="button" className="mb-2 p-button-raised" outlined />
+                   </section>  <h2 className="thirdtxt mt-2 mb-4 text-300 text-xl line-height-3">Full-stack Engineer - React, Angular, Next, .Net, Python, Django</h2>
+                       
+                   <div className='btns flex flex-column justify-content-center align-items-center w-full m-1 mr-0 lg:px-6'> 
+                        <Button label="More about me.." type="button" className="mb-2 p-button-raised mt-6 " outlined />
                    </div>                 
                 </div>
                 <div className="right-div col-12 md:col-4 flex flex-row overflow-hidden md:h-full bg-green-400">
