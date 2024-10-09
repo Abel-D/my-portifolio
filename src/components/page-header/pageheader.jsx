@@ -68,12 +68,26 @@ function PageHeader() {
         {
             label: 'My Services',
             root: true,
-            template: itemRenderer
+            template: itemRenderer,
+            path: '#services'
         },
+        {
+            label: 'My Skillset',
+            root: true,
+            template: itemRenderer,
+            path: '#skills'
+        },
+        {
+            label: 'My Projects',
+            root: true,
+            template: itemRenderer,
+            path: '#projects'
+        },        
         {
             label: 'Contact me',
             root: true,
-            template: itemRenderer
+            template: itemRenderer,
+            path: '#contact'
         }
     ];
 
@@ -90,7 +104,7 @@ function PageHeader() {
 )
 
     return (
-        <div className="container w-full px-2 flex flex-column justify-space-between justify-content-center align-items-center" >
+        <div className="container w-full px-2 flex flex-column justify-space-between justify-content-center sm:justify-content-start align-items-center" >
            {  <MegaMenu model={items} orientation="horizontal" start={start} end={end} breakpoint="960px" className=" w-full px-2 surface-0 shadow-2 flex justify-content-center align-items-center justify-space-between" style={{ borderRadius: '3rem' }} />
             }
              

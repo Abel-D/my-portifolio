@@ -54,8 +54,9 @@ img {
 }
 .head {
     height: 80%;
+    font-family: 'satisfy',cursive;
 }
-.left-div {
+.head {
     object-fit: contain !important;
     background-image:url("/assets/img/left-panel.png");
     background-repeat: no-repeat;
@@ -80,7 +81,7 @@ img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'satisfy',cursive;
+    /* font-family: 'satisfy',cursive; */
 }
 section{
     position: relative;

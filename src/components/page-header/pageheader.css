@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 .container {
-   // display: inline-block;
+   display: inline-block;
    border : 0px;
+   font-family: "Inconsolata", monospace;
+   font-optical-sizing: auto;
+   font-weight: bold;
+   font-style: normal;
 }
