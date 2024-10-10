@@ -8,7 +8,7 @@ const ServicesComponent =()=> {
         <div className="surface-0 p-3 m-1 border-solid border-blue-500 border-round-3xl">
             <div className="text-center mb-3 font-bold text-3xl">
                 <span className="text-900">My </span>
-                <span className="text-blue-600">Services</span>
+                <span className="text-blue-700">Services</span>
             </div>
             <div className="grid flex justify-space-between">
                 <div className="col-12 lg:col-4">
@@ -16,7 +16,7 @@ const ServicesComponent =()=> {
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                             <div className="flex flex-column align-items-center">
                                 <span className="font-bold text-2xl text-900">Frontend design and development</span>
-                                <span className="ml-2 font-medium text-600">Attractive UI design and development for all devices</span>
+                                <span className="ml-2 font-medium text-green-500">Attractive UI design and development for all devices</span>
                             </div>
                             <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
                             <ul className="list-none p-0 m-0 flex-grow-1">
@@ -43,7 +43,7 @@ const ServicesComponent =()=> {
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                              <div className="flex flex-column align-items-center">
                                     <span className="font-bold text-2xl text-900">Backend design and development</span>
-                                    <span className="ml-2 font-medium text-600">Backend API and database management system design and development.</span>
+                                    <span className="ml-2 font-medium text-green-500">Backend API and database management system design and development.</span>
                                 </div>
                                 <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
                             <ul>
@@ -79,7 +79,7 @@ const ServicesComponent =()=> {
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                              <div className="flex flex-column align-items-center">
                                     <span className="font-bold text-2xl text-900">Custom Software solutions</span>
-                                    <span className="ml-2 font-medium text-600">Custom curated web and desktop solutions based on your business need. </span>
+                                    <span className="ml-2 font-medium text-green-500">Custom curated web and desktop solutions based on your business need. </span>
                                 </div>
                                 <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
                             <ul>
@@ -106,7 +106,7 @@ const ServicesComponent =()=> {
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                         <div className="flex flex-column align-items-center">
                                 <span className="font-bold text-2xl text-900">Project Management</span>
-                                <span className="ml-2 font-medium text-600">Full cycle software project management using standard frameworks.</span>
+                                <span className="ml-2 font-medium text-green-500">Full cycle software project management using standard frameworks.</span>
                             </div>
                                 <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
                                 <ul className="list-none p-0 m-0 flex-grow-1">
@@ -134,7 +134,7 @@ const ServicesComponent =()=> {
                         <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                              <div className="flex flex-column align-items-center">
                                 <span className="font-bold text-2xl text-900">DevOps solutions</span>
-                                <span className="ml-2 font-medium text-600">Deploy and monitor applications on any hosting or cloud services</span>
+                                <span className="ml-2 font-medium text-green-500">Deploy and monitor applications on any hosting or cloud services</span>
                             </div>
                             <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
                             <ul className="list-none p-0 m-0 flex-grow-1">
@@ -163,7 +163,7 @@ const ServicesComponent =()=> {
                         <div className="shadow-2 p-3 flex flex-column" style={{ borderRadius: '10px' }}>
                            <div className="flex flex-column align-items-center">
                                 <span className="font-bold text-2xl text-900">System Analysis and Design</span>
-                                <span className="ml-2 font-medium text-600">System study, re-design and process automation</span>
+                                <span className="ml-2 font-medium text-green-500">System study, re-design and process automation</span>
                             </div>
                             <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
                             <ul className="list-none p-0 m-0 flex-grow-1">

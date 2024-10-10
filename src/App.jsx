@@ -65,8 +65,8 @@ function App() {
   return (
     <div className='wrapper flex flex-column w-full h-full sm:w-screen sm:h-full'>
          <Toast ref={toast} />
-        <div className=' grid flex justify-content-center w-full lg:px-3 sm:p-1'>
-            <div className='stickynav col-8 lg:col-8'> 
+        <div className=' grid flex lg:justify-content-center md:justify-content-start sm:justify-content-start w-full lg:px-3 sm:p-1'>
+            <div className='stickynav col-2 lg:col-8 sm:col-2'> 
                <PageHeader />
             </div>
           </div>

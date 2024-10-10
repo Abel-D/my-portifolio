@@ -119,23 +119,18 @@ const SkillsetComponent =()=> {
             list:[
                 {
                     img: "/assets/frameworks/vs.png",
-                    level: 100
                 },
                 {
                     img: "/assets/frameworks/vscode.png",
-                    level: 90
                 },
                 {
                     img: "/assets/frameworks/anaconda.png",
-                    level: 90
                 },
                 {
                     img: "/assets/frameworks/pycharm.png",
-                    level: 80
                 },
                 {
                     img: "/assets/frameworks/jupyter.png",
-                    level: 75
                 }
             ]
         
@@ -149,8 +144,8 @@ const SkillsetComponent =()=> {
         <span className="text-blue-600">Skillset</span>
     </div>
    {skilllist.map((skill,index)=>(<>
-        <div className="text-500 pl-6 mt-3 mb-1"><span>{skill.label}</span></div>
-        <div className="grid" key={index} className='flex justify-content-center justify-space-between p-3'>
+        <div className="text-500 mt-3 mb-1"><span>{skill.label}</span></div>
+        <div key={index} className='grid flex justify-content-center justify-space-between p-3'>
             {skill.list.map((stack,i)=>
             <div className="col-4 md:col-3 lg:col-2 flex flex-column" key={i}>
                 <div className="surface-0 shadow-2 border-1 border-50 border-round h-6rem">
@@ -158,9 +153,11 @@ const SkillsetComponent =()=> {
                         <img src={stack.img} alt={stack.img} />
                     </div>   
                 </div>
+            { stack.level &&
                 <div className="card flex justify-content-center w-full p-3">
                     <MeterGroup values={[{ label: null, value: stack.level}]} className='w-full'/>
                 </div>
+            }
             </div>
             )}        
         </div>

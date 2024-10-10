@@ -43,7 +43,7 @@ function PageHeader() {
 
    const items = [
         {
-            label: 'About me',
+            label: 'Home',
             root: true,
             icon:'',
             template: itemRenderer,
@@ -51,17 +51,18 @@ function PageHeader() {
                 [
                     {
                         items: [
-                            { label: 'My Education', icon: '', subtext: '', template: itemRenderer }
+                            { label: 'Education and Career', icon: '', subtext: '', template: itemRenderer }
                         ]
                     }
                 ],
                 [
                     {
-                        items: [
-                            { label: 'My Career', icon: '', subtext: '', template: itemRenderer },
-                            ]
-                    }
-                ],
+                        label: 'My Skillset',
+                        root: true,
+                        template: itemRenderer,
+                        path: '#skills'
+                    },
+                ]
                 
             ]
         },
@@ -70,12 +71,6 @@ function PageHeader() {
             root: true,
             template: itemRenderer,
             path: '#services'
-        },
-        {
-            label: 'My Skillset',
-            root: true,
-            template: itemRenderer,
-            path: '#skills'
         },
         {
             label: 'My Projects',
