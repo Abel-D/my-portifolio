@@ -1,0 +1,7 @@
+img {
+    width: 100%;
+}
+
+.icocontainer {
+    object-fit: contain !important;
+}

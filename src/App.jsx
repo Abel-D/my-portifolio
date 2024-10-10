@@ -13,6 +13,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import emailjs from '@emailjs/browser';
 import { Toast } from 'primereact/toast';
 import { Dialog } from 'primereact/dialog';
+import SkillsetComponent from './components/skillset/skillset.component';
         
 function App() {
    
@@ -72,12 +73,12 @@ function App() {
           <div id="landing" className='landing w-full'>
              <LandingHeader/>  
          </div>
-         <div id="services" className='services w-full p-6'> 
+         <div id="services" className='services w-full px-6 py-3'> 
             {/* <RainCssComponent/> */}
              <ServicesComponent/>
           </div>
-          <div id="skillset" className='skillset w-full'>
-             <div className='overview p-3'>SKILLS</div> 
+          <div id="skillset" className='skillset w-full px-6 py-3'>
+               <SkillsetComponent />
           </div>
           <div className='portifolio w-full '>
              <div className='overview w-full h-full p-3'>PORTIFOLIO</div> 

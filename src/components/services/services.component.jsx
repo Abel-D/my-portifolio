@@ -5,9 +5,11 @@ import { Button } from 'primereact/button';
 const ServicesComponent =()=> {
     
     return (                
-        <div className="surface-0 p-3 m-1 border-solid border-round-3xl">
-            <div className="text-900 font-bold text-6xl mb-3 text-center">My Services</div>
-           
+        <div className="surface-0 p-3 m-1 border-solid border-blue-500 border-round-3xl">
+            <div className="text-center mb-3 font-bold text-3xl">
+                <span className="text-900">My </span>
+                <span className="text-blue-600">Services</span>
+            </div>
             <div className="grid flex justify-space-between">
                 <div className="col-12 lg:col-4">
                     <div className="p-3 h-full">

@@ -1,59 +1,172 @@
 import { useState } from 'react';
-
+import './skillset.component.css';
+import { MeterGroup } from 'primereact/metergroup';
+     
 const SkillsetComponent =()=> {
 
+    const skilllist=[
+        {
+            label: "Frontend frameworks",
+            list:[
+                {
+                    img: "/assets/frameworks/react.png",
+                    level: 90
+                },
+                {
+                    img: "/assets/frameworks/nextjs.png",
+                    level: 80
+                },
+                {
+                    img: "/assets/frameworks/angular.png",
+                    level: 90
+                }
+            ]
+        
+        },
+        {
+            label: "Backend frameworks",
+            list:[
+                {
+                    img: "/assets/frameworks/dotnet.png",
+                    level: 95
+                },
+                {
+                    img: "/assets/frameworks/django.png",
+                    level: 80
+                },
+                {
+                    img: "/assets/frameworks/flask.png",
+                    level: 70
+                },
+                {
+                    img: "/assets/frameworks/fastapi.png",
+                    level: 70
+                }
+            ]
+        
+        },
+        {
+            label: "CI/CD Tools",
+            list:[
+                {
+                    img: "/assets/frameworks/docker.png",
+                    level: 100
+                },
+                {
+                    img: "/assets/frameworks/jenkins.png",
+                    level: 90
+                },
+                {
+                    img: "/assets/frameworks/kubernetes.png",
+                    level: 90
+                },
+                {
+                    img: "/assets/frameworks/ansible.png",
+                    level: 80
+                },
+                {
+                    img: "/assets/frameworks/terraform.png",
+                    level: 75
+                }
+            ]
+        
+        },
+        {
+            label: "AWS",
+            list:[
+                {
+                    img: "/assets/frameworks/ec2.png",
+                    level: 75
+                },
+                {
+                    img: "/assets/frameworks/s3.png",
+                    level: 75
+                },
+                {
+                    img: "/assets/frameworks/lambda.png",
+                    level: 75
+                }
+            ]
+        
+        },
+        {
+            label: "Python Data Analysis and Machine Learning libraries",
+            list:[
+                {
+                    img: "/assets/frameworks/pandas.png",
+                    level: 100
+                },
+                {
+                    img: "/assets/frameworks/numpy.png",
+                    level: 90
+                },
+                {
+                    img: "/assets/frameworks/scipy.png",
+                    level: 90
+                },
+                {
+                    img: "/assets/frameworks/scikit.png",
+                    level: 80
+                },
+                {
+                    img: "/assets/frameworks/seaborn.png",
+                    level: 75
+                }
+            ]
+         },
+         {
+            label: "IDEs",
+            list:[
+                {
+                    img: "/assets/frameworks/vs.png",
+                    level: 100
+                },
+                {
+                    img: "/assets/frameworks/vscode.png",
+                    level: 90
+                },
+                {
+                    img: "/assets/frameworks/anaconda.png",
+                    level: 90
+                },
+                {
+                    img: "/assets/frameworks/pycharm.png",
+                    level: 80
+                },
+                {
+                    img: "/assets/frameworks/jupyter.png",
+                    level: 75
+                }
+            ]
+        
+        },
+]
     return (
         
-<div className="surface-0 text-center">
-    <div className="mb-3 font-bold text-3xl">
+<div className="surface-0 text-center border-solid border-blue-500 border-round-3xl p-3">
+    <div className="text-center mb-3 font-bold text-3xl">
         <span className="text-900">My </span>
         <span className="text-blue-600">Skillset</span>
     </div>
-    <div className="text-700 mb-6"></div>
-    <div className="grid">
-        <div className="col-12 md:col-4 mb-4 px-5">
-            <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
-                <i className="pi pi-desktop text-4xl text-blue-500"></i>
-            </span>
-            <div className="text-900 text-xl mb-3 font-medium">Built for Developers</div>
-            <span className="text-700 line-height-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+   {skilllist.map((skill,index)=>(<>
+        <div className="text-500 pl-6 mt-3 mb-1"><span>{skill.label}</span></div>
+        <div className="grid" key={index} className='flex justify-content-center justify-space-between p-3'>
+            {skill.list.map((stack,i)=>
+            <div className="col-4 md:col-3 lg:col-2 flex flex-column" key={i}>
+                <div className="surface-0 shadow-2 border-1 border-50 border-round h-6rem">
+                    <div className="icocontainer flex justify-content-center h-full mb-3">
+                        <img src={stack.img} alt={stack.img} />
+                    </div>   
+                </div>
+                <div className="card flex justify-content-center w-full p-3">
+                    <MeterGroup values={[{ label: null, value: stack.level}]} className='w-full'/>
+                </div>
+            </div>
+            )}        
         </div>
-        <div className="col-12 md:col-4 mb-4 px-5">
-            <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
-                <i className="pi pi-lock text-4xl text-blue-500"></i>
-            </span>
-            <div className="text-900 text-xl mb-3 font-medium">End-to-End Encryption</div>
-            <span className="text-700 line-height-3">Risus nec feugiat in fermentum posuere urna nec. Posuere sollicitudin aliquam ultrices sagittis.</span>
-        </div>
-        <div className="col-12 md:col-4 mb-4 px-5">
-            <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
-                <i className="pi pi-check-circle text-4xl text-blue-500"></i>
-            </span>
-            <div className="text-900 text-xl mb-3 font-medium">Easy to Use</div>
-            <span className="text-700 line-height-3">Ornare suspendisse sed nisi lacus sed viverra tellus. Neque volutpat ac tincidunt vitae semper.</span>
-        </div>
-        <div className="col-12 md:col-4 mb-4 px-5">
-            <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
-                <i className="pi pi-globe text-4xl text-blue-500"></i>
-            </span>
-            <div className="text-900 text-xl mb-3 font-medium">Fast & Global Support</div>
-            <span className="text-700 line-height-3">Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus.</span>
-        </div>
-        <div className="col-12 md:col-4 mb-4 px-5">
-            <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
-                <i className="pi pi-github text-4xl text-blue-500"></i>
-            </span>
-            <div className="text-900 text-xl mb-3 font-medium">Open Source</div>
-            <span className="text-700 line-height-3">Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing tristique risus nec feugiat. </span>
-        </div>
-        <div className="col-12 md:col-4 md:mb-4 mb-0 px-3">
-            <span className="p-3 shadow-2 mb-3 inline-block" style={{ borderRadius: '10px' }}>
-                <i className="pi pi-shield text-4xl text-blue-500"></i>
-            </span>
-            <div className="text-900 text-xl mb-3 font-medium">Trusted Securitty</div>
-            <span className="text-700 line-height-3">Mattis rhoncus urna neque viverra justo nec ultrices. Id cursus metus aliquam eleifend.</span>
-        </div>
-    </div>
+        </>
+        )
+    )}     
 </div>
     
     )
