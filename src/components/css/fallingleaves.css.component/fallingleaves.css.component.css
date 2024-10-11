@@ -2,10 +2,15 @@
     position: absolute;
     z-index: 2;
 }
+section {/
+    width:inherit !important;
+    height:inherit !important;
+    /* background: radial-gradient(#333333,#000000); */
+}
 section .leaves{
     /* position: absolute; */
-    width:100%;
-    height:100%;
+    width:inherit !important;
+    height:inherit !important;
     /* background: radial-gradient(#333333,#000000); */
 }
 .set{

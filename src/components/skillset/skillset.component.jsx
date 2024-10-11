@@ -76,15 +76,19 @@ const SkillsetComponent =()=> {
             list:[
                 {
                     img: "/assets/frameworks/ec2.png",
-                    level: 75
+                    level: 80
                 },
                 {
                     img: "/assets/frameworks/s3.png",
                     level: 75
                 },
                 {
+                    img: "/assets/frameworks/rds.png",
+                    level: 70
+                },
+                {
                     img: "/assets/frameworks/lambda.png",
-                    level: 75
+                    level: 70
                 }
             ]
         

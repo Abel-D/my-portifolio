@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import './App.css';
+import { Router, Routes, Route, Navigate } from 'react-router-dom';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import FallingLeavesCssComponent from './components/css/fallingleaves.css.component/fallingleaves.css.component';
 import LandingHeader from './components/landing-header/landing-header';
@@ -13,12 +14,15 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import emailjs from '@emailjs/browser';
 import { Toast } from 'primereact/toast';
 import { Dialog } from 'primereact/dialog';
+import { history } from './helpers';
 import SkillsetComponent from './components/skillset/skillset.component';
+import ContactInfoComponent from './components/contact-info/contact-info.component';
         
-function App() {
+function App(props) {
    
    const [value, setValue]= useState(null);
    const [openModal, setOpenModal ] = useState(false);
+   const [activeIndex, setActiveIndex ] = useState(null);
    const emailRef = useRef(null);
    const nameRef = useRef(null);
    const messageRef = useRef(null);
@@ -63,33 +67,39 @@ function App() {
     };
 
   return (
+   <>
     <div className='wrapper flex flex-column w-full h-full sm:w-screen sm:h-full'>
-         <Toast ref={toast} />
-        <div className=' grid flex lg:justify-content-center md:justify-content-start sm:justify-content-start w-full lg:px-3 sm:p-1'>
+          <Toast ref={toast} />
+          <div className=' grid flex lg:justify-content-center md:justify-content-start sm:justify-content-start w-full lg:px-3 sm:p-1'>
             <div className='stickynav col-2 lg:col-8 sm:col-2'> 
-               <PageHeader />
+               <PageHeader activateIndex={(val)=>setActiveIndex(val)} />
             </div>
           </div>
+          <Routes>
+            <Route exact path="/" component={App} />
+            {/* <Route exact path="/" component={<Projects/>} /> */}
+            <Route render={() => <Navigate to="/" />} />
+            </Routes>
           <div id="landing" className='landing w-full'>
              <LandingHeader/>  
          </div>
          <div id="services" className='services w-full px-6 py-3'> 
-            {/* <RainCssComponent/> */}
+            <FallingLeavesCssComponent/>
              <ServicesComponent/>
           </div>
           <div id="skillset" className='skillset w-full px-6 py-3'>
                <SkillsetComponent />
           </div>
-          <div className='portifolio w-full '>
-             <div className='overview w-full h-full p-3'>PORTIFOLIO</div> 
+          <div className='portifolio w-full p-3 '>
+             <div className='overview w-full h-full p-3 border-round-xl text-center'>Portifolio ...Coming soon ...</div> 
           </div>
-          <div className='projects w-full '>
-             <div className='overview w-full h-full p-3'>PROJECTS</div> 
-          </div>          
-        
-        <div className='contactme grid flex justify-content-end align-items-end w-full p-3 pl-1'>
-           <div className='col-12 md:col-4 '>
-               <Accordion activeIndex={null} className='w-full mr-2'>
+          <div id="projects" className=' flex justify-content-center  projects w-full p-3'>
+             <div className='overview w-full h-full p-3 border-round-xl text-center'>MY Projects ...Coming soon ...</div> 
+         </div>
+          
+        <div id="contactme" className='contactme grid flex justify-content-end align-items-end w-full p-3 pl-1'>
+           <div className='msgbox col-12 md:col-4 '>
+               <Accordion activeIndex={activeIndex} className='contact w-full mr-2'>
                   <AccordionTab header={chatHeader} className='w-full m-0 px-3'>
                      <div className="flex align-items-center justify-content-center w-full p-2 mr-0">
                         <div className="surface-card shadow-2 border-round px-4 w-full">
@@ -118,10 +128,17 @@ function App() {
                </Accordion>
             </div>
          </div>
-         <Dialog header="Message sent" visible={openModal} style={{ width: '50vw' }} onHide={() => {if (!openModal) return; setOpenModal(false); }} className='flex justify-content-center text-center p-4'>
-            <p>Your message is sent. Please check your inbox for confirmation.</p>    
-         </Dialog>
-    </div>
+         
+         <div id="contact" className='contact grid flex justify-content-end align-items-end w-full p-3 pl-1'>
+            <div className='col-12 w-full'>
+               <ContactInfoComponent />
+            </div>
+         </div>
+      </div>
+      <Dialog header="Message sent" visible={openModal} style={{ width: '50vw' }} onHide={() => {if (!openModal) return; setOpenModal(false); }} className='flex justify-content-center text-center p-4'>
+          <p>Your message is sent. Please check your inbox for confirmation.</p>    
+    </Dialog>
+    </>
   )
 }
 

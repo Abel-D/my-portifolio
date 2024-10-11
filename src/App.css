@@ -1,5 +1,6 @@
 .wrapper {
     object-fit: contain !important;
+    bottom: 0px;
     /* background-image:url("/assets/img/3d-modern-background-with-flowing-lines_1048-16926.png");
     background-repeat: no-repeat;
     background-size: cover; */
@@ -10,8 +11,14 @@
     z-index: 3 !important;
     top: 10px;
 }
+
 .contactme {
     position: fixed !important;
+    z-index: 3 !important;
+    bottom: 0;
+}
+#contact {
+    position: relative !important;
     z-index: 3 !important;
     bottom: 0;
 }
@@ -39,8 +46,4 @@
     background-size: cover;*/
 }
 
-Accordion {
-    position: fixed !important;
-    bottom: 10px;
-}
 

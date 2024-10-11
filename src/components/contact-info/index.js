@@ -1,0 +1,1 @@
+export ContactInfoComponent from './';

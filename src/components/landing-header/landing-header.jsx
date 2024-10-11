@@ -68,15 +68,8 @@ function LandingHeader({content}){
             {content}              
             <div className="grid grid-nogutter flex justify-content-center align-items-center w-full h-full lg:pt-4 sm:pt-1 sm:py-1 text-800">
                 <div className="left-div col-12 md:col-8 h-full text-center md:text-left flex flex-column align-items-center lg:p-6 sm:p-1 ">
-                <div className="flex flex-row gap-3 align-items-center justify-content-center sm:justify-content-end w-full mb-0 mt-6">
-                            <a href="https://github.com/Abel-D" target="_blank" rel="noopener noreferrer" className="p-button font-bold">
-                              <img alt="github-logo" src="/assets/icons8-github-ios-17-filled-32.png" className="h-2rem"></img>
-                            </a>
-                            <a href="https://linkedin.com/in/abel-debebe-m9a9r9s" target="_blank" rel="noopener noreferrer" className="p-button font-bold">
-                              <img alt="linkedin-logo" src="/assets/linkedin-logo.png" className="h-2rem"></img>
-                            </a>
-                         </div>
-                    <section className="flex flex-row justify-space-between align-items-start w-full h-full mt-0">
+                        
+                    <section className="flex flex-row justify-space-between align-items-start w-full h-full mt-0 ">
                          
                         <div className='flex flex-column justify-content-center w-full h-15rem'>
                             <>
@@ -91,20 +84,21 @@ function LandingHeader({content}){
                         </div>
                    </section> 
                    
-                   <div className='btns flex flex-column justify-content-center align-items-center w-full m-1 mr-0 lg:px-6'> 
+                   <div className='btns flex flex-column justify-content-center w-full m-1 mr-0 lg:px-3'> 
                         <section className="flex flex-row justify-space-between justify-content-center w-full h-10rem">
-                           
-                            <div className='flex flex-column justify-content-center w-full h-full'>
+                                <h2 className="thirdtxt mt-0 mb-3 text-300 text-xl line-height-3">Licenced Full-stack Engineer - React, Angular, Next, .Net, Python, Django</h2>
+                                    <a href="https://github.com/Abel-D" target="_blank" rel="noopener noreferrer" className="mr-1 ml-1 font-bold">
+                                    <img alt="github-logo" src="/assets/icons8-github-ios-17-filled-32.png" className="h-2rem bg-green-400"></img>
+                                    </a>
+                                    <a href="https://linkedin.com/in/abel-debebe-m9a9r9s" target="_blank" rel="noopener noreferrer" className="ml-1 mr-1 font-bold">
+                                    <img alt="linkedin-logo" src="/assets/linkedin-logo.png" className="h-2rem bg-blue-600"></img>
+                                    </a>
                                 
-                                 <h2 className="thirdtxt mt-0 mb-3 text-300 text-xl line-height-3">Licenced Full-stack Engineer - React, Angular, Next, .Net, Python, Django</h2>
-                                {/* <div className="w-full flex justify-content-center">
-                                    <Button label="More about me.." type="button" className="mb-2 p-button-raised mt-6 " outlined />
-                                </div> */}
-                            </div>            
+                           
                         </section> 
                     </div>                 
                 </div>
-                <div className="right-div col-12 md:col-4 flex flex-row overflow-hidden md:h-full bg-green-400">
+                <div className="right-div col-12 md:col-4 flex flex-row overflow-hidden md:h-full mb-0 border-round-2xl">
                    <img src="assets/img/nobg_profile_1.png" alt="Abel D" className="ml-6 block md:h-full"/>
                 </div>
                 

@@ -6,6 +6,8 @@ import { MegaMenu } from 'primereact/megamenu';
 import { InputText } from 'primereact/inputtext';
 import { Ripple } from 'primereact/ripple';
 import { AutoComplete } from 'primereact/autocomplete';
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 
 function PageHeader() {
    
@@ -14,29 +16,40 @@ function PageHeader() {
             return (
                 <a className="flex justify-content-center align-items-center text-center cursor-pointer px-3 py-2 overflow-hidden relative font-semibold text-lg uppercase p-ripple hover:surface-ground" style={{ borderRadius: '2rem' }} onClick={(e) => options.onClick(e)}>
                     <span className={item.icon} />
-                    <span className="ml-2">{item.label}</span>
-                    <Ripple />
+                      {/* <span className="ml-2">{item.label}</span> */}
+                      <HashLink to={'/'+item.path}>{item.label}</HashLink>
+                      <Ripple />
                 </a>
             );
         } else if (!item.image) {
             return (
                 <a className="flex align-items-center p-3 cursor-pointer mb-2 gap-2 " onClick={options.onClick}>
-                    <span className="inline-flex align-items-center justify-content-center border-circle bg-primary w-3rem h-3rem">
+                        <span className="inline-flex align-items-center justify-content-center border-circle bg-primary w-3rem h-3rem">
                         <i className={`${item.icon} text-lg`}></i>
-                    </span>
-                    <span className="inline-flex flex-column gap-1">
-                        <span className="font-medium text-lg text-900">{item.label}</span>
+                        </span>
+                        <span className="inline-flex flex-column gap-1">
+                        <span className="font-medium text-lg text-900"> 
+                            <HashLink to={'/'+item.path}>
+                                 {item.label}
+                            </HashLink>
+                        </span>
                         <span className="white-space-nowrap">{item.subtext}</span>
                     </span>
+                    <ripple/>
                 </a>
             );
         } else {
             return (
-                <div className=" flex flex-column align-items-start gap-3" onClick={options.onClick}>
+                <a className=" flex flex-column align-items-start gap-3" onClick={options.onClick}>
                     {/* <img alt="megamenu-demo" src={item.image} className="w-full" /> */}
                     <span>{item.subtext}</span>
-                    <Button className="p-button p-component p-button-outlined" label={item.label} />
-                </div>
+                    {/* <Button className="p-button p-component p-button-outlined" >{item.label} </Button> */}
+                    <HashLink to={'/'+item.path}>       
+                        {item.label}
+                   </HashLink>
+                   <ripple/>
+                </a>
+                 
             );
         }
     };
@@ -51,32 +64,42 @@ function PageHeader() {
                 [
                     {
                         items: [
-                            { label: 'Education and Career', icon: '', subtext: '', template: itemRenderer }
+                            { 
+                                label: 'My Education', 
+                                icon: '', subtext: '', 
+                                template: 
+                                itemRenderer,path:'/education' }
                         ]
                     }
                 ],
+                 {
+                    label: 'My Career',
+                    root: true,
+                    template: itemRenderer,
+                    path: '/career'
+                },
+                 {
+                    label: 'My Services',
+                    root: true,
+                    template: itemRenderer,
+                    path: '#services'
+                },
                 [
                     {
                         label: 'My Skillset',
                         root: true,
                         template: itemRenderer,
-                        path: '#skills'
+                        path: '#skillset'
                     },
                 ]
                 
             ]
         },
         {
-            label: 'My Services',
-            root: true,
-            template: itemRenderer,
-            path: '#services'
-        },
-        {
             label: 'My Projects',
             root: true,
             template: itemRenderer,
-            path: '#projects'
+            path: '/projects'
         },        
         {
             label: 'Contact me',

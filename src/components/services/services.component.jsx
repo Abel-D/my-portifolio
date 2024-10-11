@@ -55,14 +55,10 @@ const ServicesComponent =()=> {
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
                                     <span>Modular Multi-tenant and Distributed backend application development</span>
                                 </li>
-                                <li className="flex align-items-center mb-3">
-                                    <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                    <span>GraphQL API development</span>
-                                </li>                            
-                                <li className="flex align-items-center mb-3">
+                               {/* <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
                                     <span>CI/CD - Constant Integration and Constant Deployment</span>
-                                </li>
+                                </li> */}
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
                                     <span>Database design,development and integration - SQL,PostgreSQL,Oracle 11g</span>
@@ -89,7 +85,7 @@ const ServicesComponent =()=> {
                                 </li>
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                    <span>Big data migration</span>
+                                    <span>Data migration</span>
                                 </li>
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
@@ -112,15 +108,15 @@ const ServicesComponent =()=> {
                                 <ul className="list-none p-0 m-0 flex-grow-1">
                                     <li className="flex align-items-center mb-3">
                                         <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                        <span>Agile Scrum </span>
+                                        <span>Team setup</span>
                                     </li>
                                     <li className="flex align-items-center mb-3">
                                         <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                        <span>Agile Kanban </span>
+                                        <span>Agile project management</span>
                                     </li>  
                                     <li className="flex align-items-center mb-3">
                                         <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                        <span>Waterfall </span>
+                                        <span>Project planning </span>
                                     </li>                             
                                 </ul>
                                 <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300 mt-auto" />
@@ -140,11 +136,7 @@ const ServicesComponent =()=> {
                             <ul className="list-none p-0 m-0 flex-grow-1">
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                    <span>AWS infrastructure management- EC2, S3, Lambda</span>
-                                </li>
-                                <li className="flex align-items-center mb-3">
-                                    <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                    <span>Azure deployment</span>
+                                    <span>AWS deployment and infrastructure management- EC2, S3, RDS</span>
                                 </li>
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
@@ -167,17 +159,17 @@ const ServicesComponent =()=> {
                             </div>
                             <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
                             <ul className="list-none p-0 m-0 flex-grow-1">
+                            <li className="flex align-items-center mb-3">
+                                    <i className="pi pi-check-circle text-green-500 mr-2"></i>
+                                    <span>System analysis and workflow design</span>
+                                </li>
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
                                     <span>Business Process Re-engineering - BPR</span>
                                 </li>
                                 <li className="flex align-items-center mb-3">
                                     <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                    <span>System implementation</span>
-                                </li>
-                                <li className="flex align-items-center mb-3">
-                                    <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                    <span>Business process workflow Automation</span>
+                                    <span>Business process Automation - BPA</span>
                                 </li>                                
                             </ul>
                             <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300" />
