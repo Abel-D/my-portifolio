@@ -13,13 +13,13 @@ const SkillsetComponent =()=> {
                     level: 90
                 },
                 {
+                    img: "/assets/frameworks/angular.png",
+                    level: 90
+                },
+                {
                     img: "/assets/frameworks/nextjs.png",
                     level: 80
                 },
-                {
-                    img: "/assets/frameworks/angular.png",
-                    level: 90
-                }
             ]
         
         },
@@ -50,23 +50,18 @@ const SkillsetComponent =()=> {
             list:[
                 {
                     img: "/assets/frameworks/docker.png",
-                    level: 100
                 },
                 {
                     img: "/assets/frameworks/jenkins.png",
-                    level: 90
                 },
                 {
                     img: "/assets/frameworks/kubernetes.png",
-                    level: 90
                 },
                 {
-                    img: "/assets/frameworks/ansible.png",
-                    level: 80
+                    img: "/assets/frameworks/ansible.png",           
                 },
                 {
                     img: "/assets/frameworks/terraform.png",
-                    level: 75
                 }
             ]
         
@@ -76,19 +71,15 @@ const SkillsetComponent =()=> {
             list:[
                 {
                     img: "/assets/frameworks/ec2.png",
-                    level: 80
                 },
                 {
                     img: "/assets/frameworks/s3.png",
-                    level: 75
                 },
                 {
                     img: "/assets/frameworks/rds.png",
-                    level: 70
                 },
                 {
                     img: "/assets/frameworks/lambda.png",
-                    level: 70
                 }
             ]
         
@@ -98,23 +89,18 @@ const SkillsetComponent =()=> {
             list:[
                 {
                     img: "/assets/frameworks/pandas.png",
-                    level: 100
                 },
                 {
                     img: "/assets/frameworks/numpy.png",
-                    level: 90
                 },
                 {
                     img: "/assets/frameworks/scipy.png",
-                    level: 90
                 },
                 {
                     img: "/assets/frameworks/scikit.png",
-                    level: 80
                 },
                 {
                     img: "/assets/frameworks/seaborn.png",
-                    level: 75
                 }
             ]
          },
@@ -148,17 +134,17 @@ const SkillsetComponent =()=> {
         <span className="text-blue-600">Skillset</span>
     </div>
    {skilllist.map((skill,index)=>(<>
-        <div className="text-500 mt-3 mb-1"><span>{skill.label}</span></div>
+        <div className="slider text-500 mt-3 mb-1"><span>{skill.label}</span></div>
         <div key={index} className='grid flex justify-content-center justify-space-between p-3'>
             {skill.list.map((stack,i)=>
             <div className="col-4 md:col-3 lg:col-2 flex flex-column" key={i}>
-                <div className="surface-0 shadow-2 border-1 border-50 border-round h-6rem">
+                <div className="surface-0 shadow-2 border-1 border-50 border-round h-3rem">
                     <div className="icocontainer flex justify-content-center h-full mb-3">
                         <img src={stack.img} alt={stack.img} />
                     </div>   
                 </div>
             { stack.level &&
-                <div className="card flex justify-content-center w-full p-3">
+                <div className="flex justify-content-center w-full p-3">
                     <MeterGroup values={[{ label: null, value: stack.level}]} className='w-full'/>
                 </div>
             }

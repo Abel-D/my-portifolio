@@ -8,6 +8,7 @@
 #root {
   width: inherit !important;
   overflow-x: hidden !important;
+  padding-bottom: 0px;
 }
 
 :root {
@@ -79,4 +80,122 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.face {
+  --flow-space: 1rem;
+  position: absolute;
+  border: 1px solid cornflowerblue;
+  backface-visibility: hidden;
+}
+
+.back {
+  /* display: grid; */
+  place-items: center;
+  background: cornflowerblue;
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card:focus,
+.card:focus-within,
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+Button {
+  width: 200px;
+  background: none;
+  color: blue;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  padding: 1rem;
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+
+Button:hover,
+Button:focus {
+  background: white;
+  color: cornflowerblue;
+}
+  
+.reduce-motion .back {
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.6s;
+  transform: none;
+}
+
+.reduce-motion .card:focus,
+.reduce-motion .card:focus-within,
+.reduce-motion .card:hover {
+  transform: none;
+}
+
+.reduce-motion .card:focus .back,
+.reduce-motion .card:focus-within .back,
+.reduce-motion .card:hover .back {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
+}
+
+
+.slider {
+  animation: move;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(600px);
+  }
+  25% {
+    transform: translateX(150px);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(600px);
+  }
+}
+
+.one {
+  animation-delay: 1s;
+}
+
+.two {
+  animation-delay: 2s;
+}
+
+.three {
+  animation-delay: 3s;
+}
+
+.four {
+  animation-delay: 4s;
+}
+
+.five  {
+  animation-delay: 5s;
+}
+
+.six {
+  animation-delay: 6s;
 }

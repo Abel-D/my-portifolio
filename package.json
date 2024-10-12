@@ -2,7 +2,7 @@
   "name": "my-portifolio",
   "private": true,
   "proxy": "https://blob.vercel-storage.com/",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,0 +1,1 @@
+export NotificationModalComponent from './'

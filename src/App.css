@@ -13,9 +13,15 @@
 }
 
 .contactme {
-    position: fixed !important;
+    position: static !important;
     z-index: 3 !important;
     bottom: 0;
+}
+
+.msgbtn {
+    position: fixed !important;
+    z-index: 3 !important;
+    right: 0;
 }
 #contact {
     position: relative !important;

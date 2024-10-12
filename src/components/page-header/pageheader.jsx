@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import { Navigate,Link } from 'react-router-dom';
 import { Button } from 'primereact/button';
 import { Avatar } from 'primereact/avatar';
 import { InputSwitch } from 'primereact/inputswitch';
@@ -14,40 +15,43 @@ function PageHeader() {
     const itemRenderer = (item, options) => {
         if (item.root) {
             return (
-                <a className="flex justify-content-center align-items-center text-center cursor-pointer px-3 py-2 overflow-hidden relative font-semibold text-lg uppercase p-ripple hover:surface-ground" style={{ borderRadius: '2rem' }} onClick={(e) => options.onClick(e)}>
+                <a className="flex justify-content-center align-items-center text-center cursor-pointer w-full px-3 py-2 overflow-hidden relative font-semibold text-lg uppercase p-ripple hover:surface-ground" style={{ borderRadius: '2rem' }} onClick={(e) => options.onClick(e)}>
                     <span className={item.icon} />
                       {/* <span className="ml-2">{item.label}</span> */}
-                      <HashLink to={'/'+item.path}>{item.label}</HashLink>
+                      <Link to={'/'+item.path}>
+                        <HashLink to={'/'+item.path}>{item.label}</HashLink>
+                      </Link>
                       <Ripple />
                 </a>
             );
         } else if (!item.image) {
             return (
-                <a className="flex align-items-center p-3 cursor-pointer mb-2 gap-2 " onClick={options.onClick}>
+                <a className="flex align-items-center p-3 cursor-pointer mb-2 gap-2 w-full " onClick={options.onClick}>
                         <span className="inline-flex align-items-center justify-content-center border-circle bg-primary w-3rem h-3rem">
                         <i className={`${item.icon} text-lg`}></i>
                         </span>
                         <span className="inline-flex flex-column gap-1">
                         <span className="font-medium text-lg text-900"> 
-                            <HashLink to={'/'+item.path}>
-                                 {item.label}
-                            </HashLink>
+                            <Link to={'/'+item.path}>
+                                <HashLink to={'/'+item.path}>{item.label}</HashLink>
+                            </Link>
                         </span>
                         <span className="white-space-nowrap">{item.subtext}</span>
                     </span>
-                    <ripple/>
+                    <Ripple/>
                 </a>
             );
         } else {
             return (
-                <a className=" flex flex-column align-items-start gap-3" onClick={options.onClick}>
+                <a className=" flex flex-column lg:flex-row align-items-start gap-3 w-full" onClick={options.onClick}>
                     {/* <img alt="megamenu-demo" src={item.image} className="w-full" /> */}
                     <span>{item.subtext}</span>
-                    {/* <Button className="p-button p-component p-button-outlined" >{item.label} </Button> */}
-                    <HashLink to={'/'+item.path}>       
-                        {item.label}
-                   </HashLink>
-                   <ripple/>
+                    <Button className="p-button p-component p-button-outlined" >
+                        <Link to={'/'+item.path}> 
+                            <HashLink to={'/'+item.path}>{item.label}</HashLink>
+                        </Link> 
+                    </Button>
+                     <Ripple/>
                 </a>
                  
             );
@@ -58,7 +62,8 @@ function PageHeader() {
         {
             label: 'Home',
             root: true,
-            icon:'',
+            icon:'pi pi-home',
+            inPage: 'true', 
             template: itemRenderer,
             items: [
                 [
@@ -66,46 +71,50 @@ function PageHeader() {
                         items: [
                             { 
                                 label: 'My Education', 
-                                icon: '', subtext: '', 
-                                template: 
-                                itemRenderer,path:'/education' }
+                                icon: 'pi pi-book', subtext: '', 
+                                template:itemRenderer,
+                                path:'/my-education',
+                                inPage: 'false' 
+                            },
+                            {
+                                label: 'My Career',
+                                icon: 'pi pi-book', subtext: '',
+                                template: itemRenderer,
+                                path: '/my-career',
+                                inPage: 'false' 
+                            },
+                             {
+                                label: 'My Services',
+                                icon: 'pi pi-book', subtext: '',
+                                template: itemRenderer,
+                                path: '#services',
+                                inPage: 'true' 
+                            },
+                            {
+                                label: 'My Skillset',
+                                icon: 'pi pi-book', subtext: '',
+                                template: itemRenderer,
+                                path: '#skillset',
+                                inPage: 'true' 
+                            }
                         ]
                     }
-                ],
-                 {
-                    label: 'My Career',
-                    root: true,
-                    template: itemRenderer,
-                    path: '/career'
-                },
-                 {
-                    label: 'My Services',
-                    root: true,
-                    template: itemRenderer,
-                    path: '#services'
-                },
-                [
-                    {
-                        label: 'My Skillset',
-                        root: true,
-                        template: itemRenderer,
-                        path: '#skillset'
-                    },
-                ]
-                
+                ],                              
             ]
         },
         {
             label: 'My Projects',
             root: true,
             template: itemRenderer,
-            path: '/projects'
+            path: '/#projects',
+            inPage: 'false' 
         },        
         {
             label: 'Contact me',
             root: true,
             template: itemRenderer,
-            path: '#contact'
+            path: '#contact',
+            inPage: 'true' 
         }
     ];
 
