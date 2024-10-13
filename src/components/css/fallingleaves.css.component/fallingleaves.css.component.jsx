@@ -1,12 +1,10 @@
-import {useState } from 'react';
 import './fallingleaves.css.component.css';
 
 function FallingLeavesCssComponent() {
 
-    return (
-                       
-        <section className='leaves '>
-            <div className="set">
+    return (                       
+        <section class='leaves '>
+            <div class="set">
                 {/* <div><span>Work-Life balance</span><img src="src/assets/img/leaf1.png" alt=""/></div> */}
                 <div><img src="src/assets/img/leaf2.png" alt=""/></div>
                 <div><img src="src/assets/img/leaf3.png" alt=""/></div>
@@ -16,7 +14,7 @@ function FallingLeavesCssComponent() {
                 <div><img src="src/assets/img/leaf2.png" alt=""/></div>
                 <div><img src="src/assets/img/leaf3.png" alt=""/></div>
             </div>
-            <div className="set set2">
+            <div class="set set2">
                 <div><img src="src/assets/img/leaf1.png" alt=""/></div>
                 <div><img src="src/assets/img/leaf2.png" alt=""/></div>
                 <div><img src="src/assets/img/leaf3.png" alt=""/></div>
@@ -26,7 +24,7 @@ function FallingLeavesCssComponent() {
                 <div><img src="src/assets/img/leaf2.png" alt=""/></div>
                 <div><img src="src/assets/img/leaf3.png" alt=""/></div>
             </div>
-            <div className="set set3">
+            <div class="set set3">
                 <div><img src="src/assets/img/leaf1.png" alt=""/></div>
                 <div><img src="src/assets/img/leaf2.png" alt=""/></div>
                 <div><img src="src/assets/img/leaf3.png" alt=""/></div>

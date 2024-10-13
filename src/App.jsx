@@ -52,11 +52,11 @@ function App(props) {
             <div id="landing" className='landing w-full'>
                <LandingHeader/>  
             </div>             
-            <div id="services" className='services w-full px-6 py-3'> 
+            <div id="services servicecontainer" className='services w-full px-6 py-3'> 
                <FallingLeavesCssComponent/>
                <ServicesComponent/>
             </div>
-            <div id="skillset" className='skillset w-full px-6 py-3'>
+            <div id="skillset skillscontainer" className='skillset w-full px-6 py-3'>
                   <SkillsetComponent />
             </div>
             <div className='portifolio w-full p-3 '>
@@ -68,7 +68,7 @@ function App(props) {
                      <span className="text-blue-600">Projects</span>
                   </div>
                   <div className='overview w-full h-full p-3 border-round-xl text-center'>
-                     <span className='text-large-900 '>Organizing my portifolio ...</span> 
+                     <span className='text-large-900 '>Organizing my portfolio ...</span> 
                      <span className='text-large-900 '>...Will be here soon.</span>
                   </div>
                </div> 

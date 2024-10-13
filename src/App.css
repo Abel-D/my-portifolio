@@ -34,16 +34,18 @@
     width: 100 vh !important;
 }
 
-.services {
-    /* background-image: url("\assets\img\2850303.jpg");
+.servicecontainer {
+    background-image:'/assets/services-bg.png';
+    object-fit: contain !important;
     background-repeat: no-repeat;
-    background-size: cover;*/
-} 
+    background-size: cover;
+}
 
-.skills {
-    /* background-image: url("\assets\img\5056412.jpg");
+.projects {
+    background-image: '/assets/skills-bg.png';
     background-repeat: no-repeat;
-    background-size: cover; */
+    object-fit: contain !important;
+    background-size: cover;
 }
 
 .portifolio {

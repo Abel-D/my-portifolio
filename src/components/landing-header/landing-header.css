@@ -58,7 +58,7 @@ img {
 }
 .head {
     object-fit: contain !important;
-    background-image:url("/assets/img/left-panel.png");
+    background-image:url("/assets/landing-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
