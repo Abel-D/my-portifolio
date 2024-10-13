@@ -24,10 +24,10 @@ export const ContactInfoComponent =(props)=> {
                 
                 <div className="flex gap-3 justify-content-center w-full mb-0 mt-2">
                    <a href="https://github.com/Abel-D" target="_blank" rel="noopener noreferrer" className="p-button font-bold">
-                        <img alt="github-logo" src="/assets/icons8-github-ios-17-filled-32.png" className="h-2rem border-round-3xl"></img>
+                        <img alt="github-logo" src="/assets/icons8-github-ios-17-filled-32.png" className="h-2rem border-round-xl"></img>
                     GitHub</a>
                     <a href="https://linkedin.com/in/abel-debebe-m9a9r9s" target="_blank" rel="noopener noreferrer" className="p-button font-bold text-blue-500">
-                        <img alt="linkedin-logo" src="/assets/linkedin-logo.png" className="h-2rem border-round-3xl"></img>
+                        <img alt="linkedin-logo" src="/assets/linkedin-logo.png" className="h-2rem border-round-xl"></img>
                         <span className='text-medium text-blue-300' >
                         LinkedIn
                         </span></a>
