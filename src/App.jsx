@@ -81,7 +81,7 @@ function App(props) {
             </div>
             <Dialog header={ 'Message me' } visible={openModal} onHide={() => {if (!open) return; setOpenModal(false); }}
                style={{ width: '50vw' }} breakpoints={{ '960px': '75vw', '641px': '100vw' }}
-               className='flex justify-content-center p-3 sm:w-screen sm:h-screen'>
+               className='flex justify-content-center p-3 w-1/2 h-1/2 overflow-x-hidden'>
                   <ContactForm/>
             </Dialog>
       </div>
@@ -94,12 +94,16 @@ export default App;
 const ContactForm =()=> {
    
    const [value, setValue]= useState(null);
+   const [emailFormOpen, setEmailFormOpen] = useState(null);
+   const [nameFormOpen, setNameFormOpen] = useState(1);
+   const [msgFormOpen, setMsgFormOpen] = useState(null);
+   const [sentMsg, setSentMsg ] = useState(null);
    const emailRef = useRef(null);
    const nameRef = useRef(null);
    const messageRef = useRef(null);
    const toast = useRef(null);
    const [loading, setLoading] = useState(false);
-  
+
    const messageSuccess = (
       <div className='flex flex-column text-center justify-content-center'>
         <span className='font-bold text-large-3xl text-blue-700'>
@@ -127,11 +131,10 @@ const ContactForm =()=> {
          message: messageRef.current.value
         }).then(()=>{
             toast.current.show({severity:'success', summary: 'Success', detail:'Message sent.', life: 3000}),
-            nameRef.current = '',
-            emailRef.current = '',
-            messageRef.current = '',
-            <NotificationModalComponent header="Success" 
-               content = { messageSuccess } />
+            nameRef.current = null
+            emailRef.current = null,
+            messageRef.current = null,
+            setSentMsg(1)
            
         });
       } catch (error) {
@@ -142,10 +145,18 @@ const ContactForm =()=> {
       }
     };
 
+    const openEmail =()=> {
+      setNameFormOpen(null);
+      setEmailFormOpen(1);
+    }
+    const openMsg =()=> {
+      setEmailFormOpen(null);
+      setMsgFormOpen(1);
+    }
    return (
       <>
-      <Toast useRef={toast}/>
-      <div className="flex align-items-center justify-content-center w-full p-2 mr-0">
+      
+      {/* <div className="flex align-items-center justify-content-center w-full p-2 mr-0 p-6">
       <div className="surface-card shadow-2 border-round px-4 w-full">
          <div className="text-center mb-3">
             <div className="text-900 text-3xl font-medium mb-3">Hi,</div>
@@ -153,20 +164,58 @@ const ContactForm =()=> {
             <a className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">here.</a>
          </div> 
         
-         <div>            
-            <label htmlFor="name" className="block text-900 font-medium mb-2">Name</label>
-            <InputText ref={nameRef} id="name" type="text" placeholder="Your name" className="lg:w-full sm:w-full mb-3" />
-      
-            <label htmlFor="email" className="block text-900 font-medium mb-2"> Email</label>
-            <InputText ref={emailRef} id="email" type="text" placeholder="Your email" className="lg:w-full sm:w-full mb-3" />
+         <div className='block grid justify-content-center p-6'> 
+            <div className='col-6 lg:col-6 w-full flex px-6'>           
+               <label htmlFor="name" className="block text-900 font-medium mb-2">Name</label>
+               <InputText ref={nameRef} id="name" type="text" placeholder="Your name" className="lg:w-full sm:w-full mb-3" />
+         
+               <label htmlFor="email" className="block text-900 font-medium mb-2"> Email</label>
+               <InputText ref={emailRef} id="email" type="text" placeholder="Your email" className="lg:w-full sm:w-full mb-3" />
 
-            <label htmlFor="message" className="block text-900 font-medium mb-2">Message</label>
-            <InputTextarea ref={messageRef} value={value} onChange={(e) => setValue(e.target.value)} rows={5} cols={30} className="lg:w-full sm:w-full mb-3"/>
+               <label htmlFor="message" className="block text-900 font-medium mb-2">Message</label>
+               <InputTextarea ref={messageRef} value={value} onChange={(e) => setValue(e.target.value)} rows={5} cols={30} className="lg:w-full sm:w-full mb-3"/>
+            </div>
          </div>      
          <div className='flex justify-content-center align-item-center w-full mb-6'>                    
             <Button label="Send" icon="pi pi-inbox" loading={loading} onClick={handleSubmit} className='bg-green-400 mb-3' rounded/>                         </div>
          </div> 
-      </div>
+      </div> */}
+      
+         {nameFormOpen && <div className='slider grid flex justify-content-center w-1/2 h-1/2 p-6 surface-1'>
+            <div className='col-12 md:col-8 lg:col-6 flex flex-column gap-3 justify-content-center align-items-center p-3 w-1/2'>
+               <InputText ref={nameRef} id="name" type="text" placeholder="Your name" className="h-2rem lg:w-full sm:w-full mb-3 mt-0" />
+              <div className='flex justify-content-center'> 
+                  <Button label="Next" icon="pi pi-arrow-right" onClick={openEmail} className='bg-green-400 mb-3 mt-1' rounded/> 
+               </div>
+            </div>
+         </div>}
+         {emailFormOpen && <div className='slider grid flex justify-content-center w-1/2 h-1/2 p-6 surface-1'>
+               <div className='col-12 md:col-8 lg:col-6 flex flex-column gap-3 justify-content-center align-items-center p-3 w-1/2 '>
+                  <InputText ref={emailRef} id="email" type="text" placeholder="Your email" className="h-2rem lg:w-full sm:w-full h-2rem mb-3" />
+                  <div className='flex justify-content-center'> 
+                     <Button label="Next" 
+                     icon="pi pi-arrow-right" 
+                     onClick={openMsg} 
+                     className='bg-green-400 mb-3' rounded/>
+                  </div>
+               </div>
+            </div>
+              }
+         {msgFormOpen && <div className='slider grid flex justify-content-center w-1/2 h-1/2 p-6 surface-1'>
+               <div className='col-12 md:col-8 lg:col-6 flex flex-column gap-3 justify-content-center align-items-center p-3 w-full h-full '>
+                  <InputTextarea ref={messageRef} value={value} placeholder="Your message" onChange={(e) => setValue(e.target.value)} rows={5} cols={30} className="h-15rem lg:w-full sm:w-full mb-3 h-3rem"/>
+                  <div className='flex justify-content-center'> 
+                     <Button label="Send" icon="pi pi-inbox" loading={loading} onClick={handleSubmit} className='bg-green-400 mb-3' rounded/>
+                  </div>
+               </div> 
+            </div>}
+         {sentMsg && <div className='slider grid flex justify-content-center w-1/2 h-1/2 p-6 surface-1'>
+            <div className='col-12 md:col-8 lg:col-6 p-3 w-1/2 '>
+               <span className='font-bold text-large text-500 text-blue-500'>Your message is sent.</span>
+               <span className='font-medium text-medium text-500 '>Please check your email inbox for confirmation.</span>   
+            </div>   
+           
+         </div>}
       </>
    )
 }
