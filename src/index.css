@@ -157,7 +157,7 @@ Button:focus {
 
 .slider {
   animation: move;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
 }
 
@@ -166,13 +166,13 @@ Button:focus {
     transform: translateX(600px);
   }
   25% {
-    transform: translateX(150px);
+    transform: translateX(450px);
   }
   50% {
     transform: translateX(300px);
   }
   100% {
-    transform: translateX(600px);
+    transform: translateX(0px);
   }
 }
 
