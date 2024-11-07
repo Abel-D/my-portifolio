@@ -1,3 +1,4 @@
 .imgcontainer {
     object-fit:contain !important;
+    pointerEvents: none;
 }
