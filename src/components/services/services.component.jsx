@@ -179,7 +179,7 @@ const ServicesComponent =()=> {
         }
 
     return (                
-        <div className="surface-0 p-3 m-1 border-solid border-blue-500 border-round-3xl">
+        <div className="surface-0 p-3 m-1 border-50 shadow-3 border-round-xl">
             <div className="text-center mb-3 font-bold text-3xl">
                 <span className="text-900">My </span>
                 <span className="text-blue-700">Services</span>

@@ -128,7 +128,7 @@ const SkillsetComponent =()=> {
 ]
     return (
         
-<div className="surface-0 text-center border-solid border-blue-500 border-round-3xl p-3">
+<div className="surface-0 text-center border-50 shadow-3 border-round-xl p-3">
     <div className="text-center mb-3 font-bold text-3xl">
         <span className="text-900">My </span>
         <span className="text-blue-600">Skillset</span>

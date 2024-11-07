@@ -19,7 +19,7 @@ import SkillsetComponent from './components/skillset/skillset.component';
 import ContactInfoComponent from './components/contact-info/contact-info.component';
 import NotificationModalComponent from './components/notification-modal/notification-modal.component';
 import CareerComponent from './components/career/career.component';
-import ProjectsComponent from './components/career/career.component';
+import ProjectsComponent from './components/projects/projects.component';
 import EducationComponent from './components/education/education.component';
 
 function App(props) {
@@ -36,7 +36,7 @@ function App(props) {
 
   return (
    <>
-      <div className='wrapper flex flex-column w-full h-full sm:w-screen sm:h-full'>
+      <div className='wrapper flex flex-column w-full h-full sm:w-screen sm:h-full bg-gray-300'>
          <div className=' grid flex lg:justify-content-center md:justify-content-start sm:justify-content-start w-full lg:px-3 sm:p-1'>
             <div className='stickynav col-2 lg:col-8 sm:col-2'>
                <PageHeader activateIndex={(val)=>setActiveIndex(val)} />
@@ -52,26 +52,15 @@ function App(props) {
             <div id="landing" className='landing w-full'>
                <LandingHeader/>
             </div>
-            <div id="services servicecontainer" className='services w-full px-6 py-3'>
+            <div id="services servicecontainer" className='services w-full lg:px-6 sm:px-2 py-3'>
                <FallingLeavesCssComponent/>
                <ServicesComponent/>
             </div>
-            <div id="skillset skillscontainer" className='skillset w-full px-6 py-3'>
+            <div id="skillset skillscontainer" className='skillset w-full lg:px-6 sm:px-2 py-3'>
                   <SkillsetComponent />
             </div>
-            <div className='portifolio w-full p-3 '>
-                </div>
-            <div id="projects" className=' flex justify-content-center  projects w-full p-3'>
-               <div className='overview w-full h-full p-3 border-round-xl text-center'>
-                  <div className="text-center mb-3 font-bold text-3xl">
-                     <span className="text-900">My </span>
-                     <span className="text-blue-600">Projects</span>
-                  </div>
-                  <div className='overview w-full h-full p-3 border-round-xl text-center'>
-                     <span className='text-large-900 '>Organizing my portfolio ...</span>
-                     <span className='text-large-900 '>...Will be here soon.</span>
-                  </div>
-               </div>
+            <div id="projects" className=' flex justify-content-center projects w-full lg:px-6 sm:px-2    py-3'>
+               <ProjectsComponent />                  
             </div>
             <Button onClick ={()=> setOpenModal(true) } icon='pi pi-inbox' label='Message me' className='msgbtn bg-blue-700 mb-0 mt-0' raised rounded />
             <div id="contact" className='contact grid flex justify-content-end align-items-end w-full p-3 pl-1'>
@@ -155,32 +144,6 @@ const ContactForm =()=> {
     }
    return (
       <>
-
-      {/* <div className="flex align-items-center justify-content-center w-full p-2 mr-0 p-6">
-      <div className="surface-card shadow-2 border-round px-4 w-full">
-         <div className="text-center mb-3">
-            <div className="text-900 text-3xl font-medium mb-3">Hi,</div>
-            <span className="text-600 font-medium line-height-3">Leave me your message</span>
-            <a className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">here.</a>
-         </div>
-
-         <div className='block grid justify-content-center p-6'>
-            <div className='col-6 lg:col-6 w-full flex px-6'>
-               <label htmlFor="name" className="block text-900 font-medium mb-2">Name</label>
-               <InputText ref={nameRef} id="name" type="text" placeholder="Your name" className="lg:w-full sm:w-full mb-3" />
-
-               <label htmlFor="email" className="block text-900 font-medium mb-2"> Email</label>
-               <InputText ref={emailRef} id="email" type="text" placeholder="Your email" className="lg:w-full sm:w-full mb-3" />
-
-               <label htmlFor="message" className="block text-900 font-medium mb-2">Message</label>
-               <InputTextarea ref={messageRef} value={value} onChange={(e) => setValue(e.target.value)} rows={5} cols={30} className="lg:w-full sm:w-full mb-3"/>
-            </div>
-         </div>
-         <div className='flex justify-content-center align-item-center w-full mb-6'>
-            <Button label="Send" icon="pi pi-inbox" loading={loading} onClick={handleSubmit} className='bg-green-400 mb-3' rounded/>                         </div>
-         </div>
-      </div> */}
-
          {nameFormOpen && <div className='slider grid flex justify-content-center w-1/2 h-1/2 p-6 surface-1'>
             <div className='col-12 md:col-8 lg:col-6 flex flex-column gap-3 justify-content-center align-items-center p-3 w-1/2'>
                <InputText ref={nameRef} id="name" type="text" placeholder="Your name" className="h-2rem lg:w-full sm:w-full mb-3 mt-0" />
