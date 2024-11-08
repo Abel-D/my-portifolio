@@ -34,7 +34,7 @@ function ProjectsComponent() {
                         ,
                         {
                             name: 'BarCoatERP PWA ProtoType',
-                            description: 'An easy to use and configure point of sales app and ERP system prototype that aggreggates and presents buisnesses\' sales, procurement, inventory, expense and resource real-time data to help make informed decisions',
+                            description: 'An easy to configure and use point of sales and ERP system prototype that aggreggates and presents buisnesses\' sales, procurement, inventory, expense and resource data in real-time to help make informed decisions',
                             imgs: [
                                 {
                                     path: '/projects/barcoat/login.png',
@@ -97,7 +97,7 @@ function ProjectsComponent() {
                           },
                         {
                             name:'AskwalAdmin',
-                            description:'A school and learning management personal project that delivers educational contents helping manage students\' learning data with added features of data analysis and machine learning to track learner\'s progress and assisst them on their track by providing resources by scrapping the web',
+                            description:'A personal school and learning management project that delivers educational contents helping manage learners\' learning data with added features of data analysis and machine learning to track learner\'s progress and assisst them on their track by providing resources by scrapping the web',
                             imgs:[],
                             stacks:[{
                                 name:'React',
@@ -147,11 +147,11 @@ function ProjectsComponent() {
             {projects.map((p,i)=>
             <div key={i} className='shadow-2 col-12 lg:col-5 md:col-5 flex flex-column justify-content-center align-items-center justify-space-between text-start border-round-xl h-auto p-2'>
                 <div className='flex flex-row h-full'>
-                    <div className='imgcontainer flex justify-content-center align-items-center w-1/2 h-full p-1'>
+                    <div className='imgcontainer flex justify-content-center align-items-center w-1/2 h-full p-1 py-3'>
                         <Galleria value={p.imgs} responsiveOptions={responsiveOptions} numVisible={5} style={{ maxWidth: '640px' }} 
-                            item={itemTemplate} thumbnail={thumbnailTemplate} />
+                            item={itemTemplate} thumbnail={thumbnailTemplate}  circular autoPlay transitionInterval={2000} className='h-15rem w-15rem' />
                     </div>
-                    <div className='flex flex-column justify-content-center align-items-center w-1/2 p-2'>
+                    <div className='flex flex-column justify-content-center align-items-center w-1/2 p-6'>
                         <section className='flex flex-column justify-content-center'>
                              <>
                             {!p.url && <span className='font-bold text-2xl'>{p.name}</span> }

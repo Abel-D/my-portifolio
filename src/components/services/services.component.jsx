@@ -125,23 +125,19 @@ const ServicesComponent =()=> {
                             setContent(
                                 <div className="shadow-2 p-3 h-full flex flex-column" style={{ borderRadius: '10px' }}>
                                 <div className="flex flex-column align-items-center">
-                                        <span className="font-bold text-2xl text-900">Project Management</span>
-                                        <span className="ml-2 font-medium text-green-500">Full cycle Agile software project management with Scrum and Kanban.</span>
-                                    </div>
+                                    <span className="font-bold text-2xl text-900">DevOps solutions</span>
+                                    <span className="ml-2 font-medium text-green-500">Deploy and monitor applications on any hosting or cloud services</span>
+                                </div>
                                         <hr className="my-3 mx-0 border-top-1 border-bottom-none border-300" />
-                                            <ul className="list-none text-center p-0 m-0 flex-grow-1">
+                                        <ul className="list-none text-center p-0 m-0 flex-grow-1">
                                             <li className="flex align-items-center mb-3">
                                                 <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                                <span>Team setup</span>
+                                                <span>Deploy on any cloud or hosting service</span>
                                             </li>
                                             <li className="flex align-items-center mb-3">
                                                 <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                                <span>Agile project management</span>
-                                            </li>  
-                                            <li className="flex align-items-center mb-3">
-                                                <i className="pi pi-check-circle text-green-500 mr-2"></i>
-                                                <span>Project planning </span>
-                                            </li>                             
+                                                <span>Scale and manage cloud infrastucture</span>
+                                            </li>                               
                                         </ul>
                                         <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300 mt-auto" />
                                 </div>
